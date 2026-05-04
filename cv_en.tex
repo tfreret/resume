@@ -1,0 +1,207 @@
+%-------------------------
+% Resume EN
+% Author : Tom FRERET
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{charter}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\setlength{\tabcolsep}{0in}
+
+% Disable hyphenation to prevent word breaks
+\hyphenpenalty=5000
+\exhyphenpenalty=5000
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \begin{minipage}[t]{\dimexpr\linewidth-2em\relax}
+    \textbf{#1}{: #2 \vspace{-2pt}}
+    \end{minipage}
+  }
+}
+
+\newcommand{\resumeItemPlain}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeIndentedLine}[2]{
+  \noindent\hspace*{8pt}\parbox[t]{\dimexpr\linewidth-2em\relax}{\textbf{#1}: #2\vspace{2pt}}
+}
+
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small #1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+
+\begin{document}
+
+%--------------------
+%     Header
+%--------------------
+\begin{center}
+  \textbf{\Huge Tom Freret} \\ \vspace{3pt}
+  \small \faMapMarker* \hspace{2pt}\texttt{France} \hspace{1pt}
+  \hspace{1pt} \faEnvelope \hspace{2pt} \href{mailto:first.last@email.com}{first.last@email.com} \hspace{1pt}
+  \hspace{1pt} \faPhone \hspace{2pt} +33123456789 \hspace{1pt}
+  \hspace{1pt} \faGithub \hspace{2pt} \href{https://github.com/tfreret}{/tfreret} \hspace{1pt}
+  \hspace{1pt} \faLinkedinIn \hspace{2pt} \href{https://linkedin.com/tom-freret}{/tom-freret} \hspace{1pt}
+  % \hspace{1pt} \faGlobe \hspace{2pt} \href{https://tfreret.fr}{tfreret.fr}
+\end{center}
+
+
+%--------------------
+%     Summary
+%--------------------
+% \small{...}
+
+%--------------------
+%     Experience
+%--------------------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Orange Wholesale}{Rennes, France}
+      {Software Engineer - Apprenticeship}{April 2023 -- Present}
+      \resumeItemListStart
+        \resumeItem{End-of-Study Project (ongoing, 6 months)}{Led modernization of legacy PHP/Apache services to stateless Kubernetes-based cloud in Golang, collaborating cross-functionally to integrate OpenTelemetry, GitLab CI/CD pipelines, and reusable packages.}
+        \resumeItem{AI Code Review}{Designed automated code review system in Python, tailored with prompt engineering to pre-analyze pull requests and reduce review load.}
+        \resumeItem{Evita}{Coordinated supervision scenarios across stakeholders for call center with simulated VoIP, SMS alerting, and silent anomaly detection across 6 client journeys.}
+        \resumeItem{TracerouteGraph}{Grafana plugins with React and D3.js to visualize traceroute network metrics, now actively used in monitoring, with a clear improvement in network observability.}
+        \resumeItem{Cockpit}{Mentored code reviews and improved alerting microservices in Golang by optimizing backends and strengthening automated Docker-based tests. Shared best practices with team.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Orange Innov}{Bucharest, Romania}
+      {Devops Engineer - Internship}{June 2025 -- September 2025}
+      \resumeItemListStart
+        \resumeItem{Cloud Console}{Refined Java Spring Boot app for managing multi-cloud projects with budget-rights controls. Gathered and implemented user feedback from stakeholders.}
+        \resumeItem{Mailing Service}{Led design and deployment of Java Spring Boot mailing service with GitLab CI/CD pipeline and automated deployment on Google Cloud Run.}
+    \resumeItemListEnd
+        \resumeSubheading
+      {Orange Wholesale}{Rennes, France}
+      {Full-Stack Developer - Internship}{April 2023 -- July 2023}
+      \resumeItemListStart
+        \resumeItem{Team247}{Gathered user requirements and delivered PHP/JavaScript web app for validating on-call schedules to improve calendar management. Collected feedback for iterative improvement.}
+        \resumeItem{RTB3}{Designed and owned modular test libraries with Robot Framework and Shell scripting to automate SIM card control. Documented processes for team reuse.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Districenter}{Saint-Aubin-du-Cormier, France}
+      {Student Warehouse Worker}{Summers 2019 -- 2021}
+      \resumeItemListStart
+        \resumeItemPlain{Rehired every summer for reliability and immediate autonomy in a fast-paced warehouse environment.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%--------------------
+%     Education
+%--------------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {IMT Atlantique}{Nantes, France}
+      {Engineer's degree (Apprenticeship) - Software Development - GPA: 3.84}{September 2023 -- September 2026}
+      \resumeItemListStart
+        \resumeItem{Airport IoT System}{Collaborated on distributed system to simulate and monitor airport sensors via MQTT and ESP32 with Golang services and a React dashboard.}
+        \resumeItem{Pascal.es}{People's Choice Award for designing a peer-support app against alcoholism with Figma (Hacking Health Nantes / Nantes Design School).}
+    \resumeItemListEnd
+    \resumeSubheading
+      {IUT of Nantes}{Nantes, France}
+      {Bachelor's degree in Computer Science}{September 2021 -- September 2023}
+      \resumeItemListStart
+        \resumeItem{Pixel Runner}{Developed networked multiplayer logic in Golang for a 2D speed game.}
+        \resumeItem{Fruits}{E-commerce sites in PHP and Vue.js with cart and online payment management.}
+        \resumeItem{Martian Chess}{Kotlin strategy game with advanced design pattern implementation.}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%--------------------
+%     Skills
+%--------------------
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\raggedright
+\section{Skills}
+\small{
+\resumeIndentedLine{Development}{Go, Java, TypeScript/JavaScript (React), SQL, PHP, Kotlin, Python}
+\resumeIndentedLine{Frameworks/Tools}{Git, Docker, Kubernetes, GitLab CI/CD, Nix, Ansible}
+\resumeIndentedLine{Data \& Observability}{OpenTelemetry stack, Grafana, Opensearch, InfluxDB}
+\resumeIndentedLine{Methodologies}{Agile, Design Patterns, Agentic AI, SpecDriven Development}
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\raggedright
+\section{Languages \& Interests}
+\small{
+\resumeIndentedLine{Languages}{French (Native), English (TOEIC 950/C1), German (Basic)}
+\resumeIndentedLine{Volunteer}{Multiple Sclerosis Association}
+\resumeIndentedLine{Interests}{Cooking, climbing, self-hosting/electronics, running, motorcycling}
+}
+\end{minipage}
+
+\end{document}

@@ -1,0 +1,206 @@
+%------------------------
+% Resume FR
+% Author : Tom FRERET
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{charter}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\setlength{\tabcolsep}{0in}
+
+% Disable hyphenation to prevent word breaks
+\hyphenpenalty=5000
+\exhyphenpenalty=5000
+
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \begin{minipage}[t]{\dimexpr\linewidth-2em\relax}
+    \textbf{#1}{: #2 \vspace{-2pt}}
+    \end{minipage}
+  }
+}
+
+\newcommand{\resumeItemPlain}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeIndentedLine}[2]{
+  \noindent\hspace*{8pt}\parbox[t]{\dimexpr\linewidth-2em\relax}{\textbf{#1}: #2\vspace{2pt}}
+}
+
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small #1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+
+\begin{document}
+
+%--------------------
+%     Header
+%--------------------
+\begin{center}
+  \textbf{\Huge Tom Freret} \\ \vspace{3pt}
+  \small \faMapMarker* \hspace{2pt}\texttt{France} \hspace{1pt}
+  \hspace{1pt} \faEnvelope \hspace{2pt} \href{mailto:first.last@email.com}{first.last@email.com} \hspace{1pt}
+  \hspace{1pt} \faPhone \hspace{2pt} 0123456789 \hspace{1pt}
+  \hspace{1pt} \faGithub \hspace{2pt} \href{https://github.com/tfreret}{/tfreret} \hspace{1pt}
+  \hspace{1pt} \faLinkedinIn \hspace{2pt} \href{https://linkedin.com/tom-freret}{/tom-freret} \hspace{1pt}
+  % \hspace{1pt} \faGlobe \hspace{2pt} \href{https://tfreret.fr}{tfreret.fr}
+\end{center}
+
+%--------------------
+%     Summary
+%--------------------
+% \small{...}
+
+%--------------------
+%     Experience
+%--------------------
+\section{Expérience Professionnelle}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Orange Wholesale}{Rennes, France}
+      {Ingénieur logiciel - Alternance}{Avril 2023 -- Présent}
+      \resumeItemListStart
+        \resumeItem{Projet de fin d'études (en cours, 6 mois)}{Modernisation de services PHP/Apache historiques vers des services golang déployés sur une plateforme cloud Kubernetes(Docker + Helm). Integration de la stack OpenTelemetry. Création de pipelines GitLab CI/CD et packages réutilisables.}
+        \resumeItem{AI Code Review}{Système automatisé de revue de code en Python intégrant les notions de Prompt Engineering et de Context Enrichment pour pré-analyser les Pull Requests. Réduction de 1 à 2 commentaires humains par revue.}
+        \resumeItem{Evita}{Scénarios de supervision pour les centres d'appels orange France avec appels VoIP simulés, alerting SMS, résultant à la détection d'anomalies silencieuses pour 6 parcours clients.}
+        \resumeItem{TracerouteGraph}{Plugins Grafana en React et D3.js pour visualiser les métriques traceroute, désormais réellement exploitées en supervision, avec une amélioration de l'observabilité réseau.}
+        \resumeItem{Cockpit}{Développement continue sur des microservices d'alerting en Golang avec optimisation des backends et renforcement des tests automatisés via Docker.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Orange Innov}{Bucarest, Roumanie}
+      {Ingénieur DevOps - Stage}{Juin 2025 -- Septembre 2025}
+      \resumeItemListStart
+        \resumeItem{Cloud Console}{Application Java Spring Boot pour la gestion de projets cloud multi-fournisseurs avec gestion des droits budgétaires.}
+        \resumeItem{Mailing Service}{Service de messagerie mail en Java Spring Boot avec pipeline GitLab CI/CD et déploiement automatisé sur Google Cloud Run.}
+    \resumeItemListEnd
+        \resumeSubheading
+      {Orange Wholesale}{Rennes, France}
+      {Développeur Full-Stack - Stage}{Avril 2023 -- Juillet 2023}
+      \resumeItemListStart
+        \resumeItem{Team247}{Application web de validation d'astreintes/horaires en PHP et JavaScript pour améliorer la gestion des emplois du temps.}
+        \resumeItem{RTB3}{Automatisation d'opérations de contrôle de cartes SIM via des bibliothèques de tests modulaires en Robot Framework et Shell scripting.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Districenter}{Saint-Aubin-du-Cormier, France}
+      {Employé étudiant en manutention}{Étés 2019 -- 2021}
+      \resumeItemListStart
+        \resumeItemPlain{Renouvellement annuel des missions sur trois ans, assurant une autonomie complète et une intégration fluide au sein des équipes logistiques en période de forte activité.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%--------------------
+%     Education
+%--------------------
+\section{Formation}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {IMT Atlantique}{Nantes, France}
+      {Diplôme d'ingénieur (Alternance) - Développement logiciel}{Septembre 2023 -- Septembre 2026}
+      \resumeItemListStart
+        \resumeItem{Airport IoT System}{Système distribué de simulation et supervision de capteurs aéroportuaires via MQTT et ESP32 en communication avec des services Golang et un dashboard en React.}
+        \resumeItem{Pascal.es}{Prix du public pour la conception d'une application mobile d'entraide contre l'alcoolisme avec Figma (Hacking Health Nantes / Ecole de design Nantes).}
+      \resumeItemListEnd
+    \resumeSubheading
+      {IUT de Nantes}{Nantes, France}
+      {Bachelor Universitaire de Technologie (BUT) - Informatique}{Septembre 2021 -- Septembre 2023}
+      \resumeItemListStart
+        \resumeItem{Pixel Runner}{Implémentation de la logique multijoueur réseau en Golang pour un jeu de rapidité en 2D.}
+        \resumeItem{Fruits}{Sites de e-commerce en PHP et Vue.js avec gestion de panier et paiement en ligne.}
+        \resumeItem{Martian Chess}{Application en Kotlin d'un jeu de stratégie avec l'implémentation de patrons de conception avancés.}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%--------------------
+%     Skills
+%--------------------
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\raggedright
+\section{Compétences}
+\small{
+\resumeIndentedLine{Développement}{Go, Java, TypeScript/JavaScript (React), SQL, PHP, Kotlin, Python}
+\resumeIndentedLine{Frameworks/Outils}{Git, Docker, Kubernetes, GitLab CI/CD, Nix, Ansible}
+\resumeIndentedLine{Données \& Observabilité}{OpenTelemetry stack, Grafana, Opensearch, InfluxDB}
+\resumeIndentedLine{Méthodologies}{Agile, Design Patterns, Agentic AI, SpecDriven Development}
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\raggedright
+\section{Langues \& Intérêts}
+\small{
+\resumeIndentedLine{Langues}{Français (natif), Anglais (TOEIC 950/C1), Allemand (notions)}
+\resumeIndentedLine{Bénévole}{Association de lutte contre la sclérose en plaques}
+\resumeIndentedLine{Centres d'intérêt}{Cuisine, escalade, self-hosting/électronique, course à pied, moto}
+}
+\end{minipage}
+
+\end{document}
